@@ -1,11 +1,13 @@
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 class WordPattern {
 
     public static void main(String[] arg){
       WordPattern wp = new WordPattern();
       var result = wp.wordPattern("abba", "dog cat cat dog");
-      
+      System.out.println(result);
       /**
       Example 1:
       Input: pattern = "abba", s = "dog cat cat dog"
