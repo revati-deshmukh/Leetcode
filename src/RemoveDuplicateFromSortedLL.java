@@ -15,10 +15,11 @@ public class RemoveDuplicateFromSortedLL {
         insertFirst(1);
         insertFirst(1);
         display();
-        deleteDuplicates(head);
+        // deleteDuplicates(head);
+        removeDuplicates();
         display();
     }
-    private static ListNode head;
+    public static ListNode head;
 
     public static void insertFirst(int val){
         ListNode first = new ListNode(val);
@@ -42,6 +43,19 @@ public class RemoveDuplicateFromSortedLL {
         }
 
         return head;
+    }
+
+    public static void removeDuplicates(){
+        if(head == null)
+            return;
+
+        ListNode temp = head;
+        while(temp != null && temp.next != null){
+            if(temp.val == temp.next.val){
+                temp.next = temp.next.next;
+            }
+            temp = temp.next;
+        }
     }
 
     public static void display(){
