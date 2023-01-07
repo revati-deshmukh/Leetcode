@@ -7,6 +7,8 @@ public class HappyNumber {
         var result = hn.isHappy(19);
         System.out.println(result);
 
+        System.out.println(happyNumber(19));
+
         /**
          * Example 1:
          * Input: n = 19
@@ -46,5 +48,32 @@ public class HappyNumber {
         }
 
         return flag == 1;
+    }
+
+    //Using Linked list
+    public static boolean happyNumber(int n){
+        int slow = n;
+        int fast = n;
+
+        do{
+            slow = getSumOfSquares(slow);
+            fast = getSumOfSquares(getSumOfSquares(fast));
+        } while(slow != fast);
+
+        if(slow == 1)
+            return true;
+
+        return false;
+    }
+
+    public static int getSumOfSquares(int n){
+        int sum = 0;
+        while(n != 0){
+            int rem = n % 10;
+            sum += rem * rem;
+            n = n / 10;
+        }
+
+        return sum;
     }
 }
