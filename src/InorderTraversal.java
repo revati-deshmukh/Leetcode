@@ -15,7 +15,7 @@ public class InorderTraversal {
           this.right = right;
         }
     }
-
+    private TreeNode root;
     ArrayList<Integer> list = new ArrayList<Integer>();
 
     public List<Integer> inorderTraversal(TreeNode root) {
