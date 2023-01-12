@@ -1,1 +1,1 @@
-Here I will be uploading solutions for Leetcode problems which I solve.
+Here I will be uploading solutions for Leetcode problems.
