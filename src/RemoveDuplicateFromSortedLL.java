@@ -10,8 +10,8 @@ class ListNode {
 
 public class RemoveDuplicateFromSortedLL {
     public static void main(String[] args){
-        insertFirst(3);
-        insertFirst(2);
+        insertFirst(1);
+        insertFirst(1);
         insertFirst(1);
         insertFirst(1);
         display();
@@ -53,8 +53,9 @@ public class RemoveDuplicateFromSortedLL {
         while(temp != null && temp.next != null){
             if(temp.val == temp.next.val){
                 temp.next = temp.next.next;
+            } else {
+                temp = temp.next;
             }
-            temp = temp.next;
         }
     }
 
