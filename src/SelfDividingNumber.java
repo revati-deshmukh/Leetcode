@@ -2,6 +2,8 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+// https://leetcode.com/problems/self-dividing-numbers/description/
+
 public class SelfDividingNumber {
     public static void main(String[] args){
         SelfDividingNumber sdn = new SelfDividingNumber();
